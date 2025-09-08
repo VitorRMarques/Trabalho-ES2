@@ -44,6 +44,12 @@ function acelerar(veiculo: Veiculo): void{
     console.log(veiculo.velocidade);
 }}
 
+function frear(veiculo: Veiculo): void{
+    if(veiculo.marchaAtual != 0){
+    veiculo.velocidade += veiculo.potencia* -0.1;
+    console.log(veiculo.velocidade);
+}}
+
 function criaVeiculo(): Veiculo{
     const veiculo: Veiculo = new Veiculo();
     veiculo.marca = teclado('Marca: ');
