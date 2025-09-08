@@ -23,7 +23,14 @@ while(true){
         case 1:
             acelerar(carro);
             break;
-    
+        case 2:
+            frear(carro)
+        case 3:
+            subirMarcha(carro)
+        case 4:
+            descerMarcha(carro)
+        case 5:
+            imprimirDados(carro)
         default:
             break;
     }
