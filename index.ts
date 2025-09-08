@@ -60,4 +60,9 @@ function criaVeiculo(): Veiculo{
     return veiculo;
 }
 
+function subirMarcha(veiculo: Veiculo): void{
+    if(veiculo.marchaAtual == 0){
+        acelerar(veiculo)
+    }
+}
 
