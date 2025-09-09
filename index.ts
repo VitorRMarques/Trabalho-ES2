@@ -43,13 +43,16 @@ while(true){
 console.table(carro);
 
 function acelerar(veiculo: Veiculo): void{
-    if(veiculo.marchaAtual != 0){
+    if(veiculo.marchaAtual != 0 || veiculo.marchaAtual == 0 || veiculo.velocidade >= 0 ){
+    veiculo.marchaAtual++
     veiculo.velocidade += veiculo.potencia*0.1;
     console.log(veiculo.velocidade);
 }}
 
 function frear(veiculo: Veiculo): void{
     if(veiculo.velocidade > 0 && veiculo.marchaAtual != 0){
+    const freando = veiculo.marchaAtual - veiculo.numeroMarchas
+    console.log(`${freando}`)
     veiculo.velocidade -= veiculo.potencia * 0.1;
     console.log(veiculo.velocidade);
 }}
@@ -62,7 +65,7 @@ function subirMarcha(veiculo: Veiculo): void{
 function descerMarcha(veiculo: Veiculo):void{
     if(veiculo.marchaAtual - veiculo.numeroMarchas){
         veiculo.marchaAtual--
-        console.log("O veículo ddesceu a marcha.")
+        console.log("O veículo desceu a marcha.")
     }
 }
 function imprimirDados(veiculo: Veiculo):void{
