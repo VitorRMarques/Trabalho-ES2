@@ -43,7 +43,8 @@ while(true){
 console.table(carro);
 
 function acelerar(veiculo: Veiculo): void{
-    if(veiculo.marchaAtual != 0){
+    if(veiculo.marchaAtual != 0 && veiculo.velocidade >= 0){
+    veiculo.marchaAtual++
     veiculo.velocidade += veiculo.potencia*0.1;
     console.log(veiculo.velocidade);
 }}
