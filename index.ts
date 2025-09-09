@@ -49,6 +49,25 @@ function frear(veiculo: Veiculo): void{
     veiculo.velocidade += veiculo.potencia* -0.1;
     console.log(veiculo.velocidade);
 }}
+function subirMarcha(veiculo: Veiculo): void{
+    if(veiculo.marchaAtual == 0){
+        acelerar(veiculo)
+    }
+}
+function descerMarcha(veiculo: Veiculo):void{
+    if(veiculo.marchaAtual>0){
+        veiculo.marchaAtual--
+        
+    }
+}
+function imprimirDados(veiculo: Veiculo):void{
+    console.log("Dados do veículo: ")
+    console.log("-".repeat(30))
+    console.log(`Cor do veículo: ${veiculo.cor}`)
+    console.log(`Marca do veículo: ${veiculo.marca}`)
+    console.log(`Modelo do veículo: ${veiculo.modelo}`)
+    console.log(`Potência do veículo${veiculo.potencia}`)
+}
 
 function criaVeiculo(): Veiculo{
     const veiculo: Veiculo = new Veiculo();
@@ -60,9 +79,4 @@ function criaVeiculo(): Veiculo{
     return veiculo;
 }
 
-function subirMarcha(veiculo: Veiculo): void{
-    if(veiculo.marchaAtual == 0){
-        acelerar(veiculo)
-    }
-}
 
